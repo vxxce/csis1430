@@ -5,3 +5,13 @@ html {
 body {
   padding: 2rem;
 }
+
+#test:hover {
+  transition-duration: 3s;
+  transform: rotate(180deg);
+  padding: 2rem;
+}
+
+td, th {
+  padding: 0.3rem;
+}
