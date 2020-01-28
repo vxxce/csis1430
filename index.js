@@ -1,19 +1,16 @@
-/**
- * Required External Modules
- */
+const express = require("express");
+const path = require("path");
 
-/**
- * App Variables
- */
+// App variables
+const app = express();
+const port = process.env.PORT || "8000";
 
-/**
- *  App Configuration
- */
+// Route definitions
+app.get("/", (req, res) => {
+  res.status(200).json("Nice");
+});
 
-/**
- * Routes Definitions
- */
-
-/**
- * Server Activation
- */
+// Server activation
+app.listen(port, () => {
+  console.log(`Listening http://localhost:${port}`);
+});
