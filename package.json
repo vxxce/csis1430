@@ -1,9 +1,13 @@
 {
   "name": "csis1430",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.3.1"
+  },
   "description": "Site for CSIS 1430",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
     "dev": "nodemon ./index.js"
   },
   "repository": {
