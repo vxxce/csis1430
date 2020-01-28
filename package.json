@@ -1,0 +1,23 @@
+{
+  "name": "csis1430",
+  "version": "1.0.0",
+  "description": "Site for CSIS 1430",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vxxce/csis1430.git"
+  },
+  "keywords": [
+    "slcc",
+    "csis1430"
+  ],
+  "author": "Zachary Olpin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vxxce/csis1430/issues"
+  },
+  "homepage": "https://github.com/vxxce/csis1430#readme"
+}
