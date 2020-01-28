@@ -5,9 +5,16 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || "8000";
 
+// Config / Middlewares
+app.use(express.static(path.join(__dirname, "public"))); // Serve static assets/resources
+
 // Route definitions
-app.get("/", (req, res) => {
-  res.status(200).json("Nice");
+app.get("/", (_req, res) => {
+  res.render("index.html");
+});
+
+app.get("/test", (_req, res) => {
+  res.render("test.html");
 });
 
 // Server activation
