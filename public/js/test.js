@@ -1,5 +1,5 @@
 const test = document.getElementById('test')
-test.style.width = '100vw'
+test.style.width = '80vw'
 test.style.height = '75vh'
 test.addEventListener('mouseover', e => {
   test.style.backgroundColor = '#ffdddd'
