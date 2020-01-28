@@ -4,7 +4,7 @@
   "description": "Site for CSIS 1430",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/vxxce/csis1430/issues"
   },
-  "homepage": "https://github.com/vxxce/csis1430#readme"
+  "homepage": "https://github.com/vxxce/csis1430#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
