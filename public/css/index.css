@@ -3,13 +3,7 @@ html {
 }
 
 body {
-  padding: 2rem;
-}
-
-#test:hover {
-  transition-duration: 3s;
-  transform: rotate(180deg);
-  padding: 2rem;
+  padding: 3rem;
 }
 
 td, th {

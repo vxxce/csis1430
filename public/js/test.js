@@ -1,9 +1,12 @@
-const test = document.getElementById('test')
-test.style.width = '85vw'
-test.style.height = '65vh'
-test.addEventListener('mouseover', e => {
-  test.style.backgroundColor = '#ffdddd'
+const moduleOne = document.getElementById('moduleOne')
+moduleOne.style.width = '85vw'
+moduleOne.style.height = '65vh'
+moduleOne.addEventListener('mouseover', e => {
+  moduleOne.style.backgroundColor = '#ffdddd'
+  moduleOne.style.transitionDuration = '3s'
+  moduleOne.style.transform = 'rotate(360deg)'
 })
-test.addEventListener('mouseout', e => {
-  test.style.backgroundColor = '#fff'
+moduleOne.addEventListener('mouseout', e => {
+  moduleOne.style.backgroundColor = '#fff'
+  
 })
