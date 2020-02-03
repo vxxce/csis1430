@@ -1,11 +1,87 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #dfdfdf;
 }
 
 body {
-  padding: 3rem;
+  margin: 0;
 }
 
-td, th {
-  padding: 0.3rem;
+main {
+  color: rgb(49, 51, 53);
+  padding: 1.75rem;
+  line-height: 1.25rem;
+}
+
+main > header > h1 {
+  margin: 0 0 1rem 0;
+}
+
+main > header > h2 {
+  font-style: italic;
+}
+
+main div.hr{
+  width: 100%;
+  border-bottom: 0.5rem solid #4b664c;
+  margin: 0.25rem 0 1.25rem 0;
+}
+
+main table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+main  th, tr, td {
+  padding: 1rem;
+  text-align: center;
+}
+
+main th {
+  font-size: 1.5rem;
+}
+
+main td {
+  border: 0.5rem solid #896A4E;
+  margin: 0;
+  max-width: 35rem;
+}
+table td img {
+  max-width: 125px;
+}
+
+main  a {
+  color: rgb(55, 145, 170);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+main  a:hover {
+  text-decoration: underline;
+}
+
+.videoWrapper {
+  margin: 2.5rem 0;
+}
+
+.navbar {
+  font-size: 1.75rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2C383E;
+  padding: 1.25rem;
+  margin: 0;
+}
+
+.nav-link > a {
+  color: #C8D3D6;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+.nav-link > a:hover {
+  color: #C8D3D6;
+  border-bottom: 2.5rem solid #896A4E;
 }
