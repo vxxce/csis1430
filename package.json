@@ -28,8 +28,6 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "helmet": "^3.21.2"
+    "express": "^4.17.1"
   }
 }
