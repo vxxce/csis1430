@@ -1,11 +1,14 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  background-color: #dfdfdf;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 
 main {
@@ -33,7 +36,7 @@ main table {
   margin: 0 auto;
 }
 
-main  th, tr, td {
+main th, tr, td {
   padding: 1rem;
   text-align: center;
 }
@@ -51,13 +54,13 @@ table td img {
   max-width: 125px;
 }
 
-main  a {
+main a {
   color: rgb(55, 145, 170);
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
-main  a:hover {
+main a:hover {
   text-decoration: underline;
 }
 
@@ -72,16 +75,16 @@ main  a:hover {
   justify-content: space-around;
   align-items: center;
   background-color: #2C383E;
-  padding: 1.25rem;
+  padding: 1.75rem;
+  flex-wrap: nowrap;
   margin: 0;
 }
 
 .nav-link > a {
-  color: #C8D3D6;
+  color: rgb(181, 197, 201);
   text-decoration: none;
-  padding: 0.5rem 1rem;
 }
 .nav-link > a:hover {
-  color: #C8D3D6;
-  border-bottom: 2.5rem solid #896A4E;
+  color: rgb(233, 242, 245);
+  text-decoration: underline;
 }
