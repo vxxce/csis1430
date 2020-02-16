@@ -21,6 +21,10 @@ app.get("/pizza-1", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'pizza-1/index.html'))
 });
 
+app.get("/image-map", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'image-map/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
