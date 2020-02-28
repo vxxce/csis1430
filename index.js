@@ -29,6 +29,10 @@ app.get("/superheroes", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'superheroes/index.html'))
 });
 
+app.get("/little-boxes", (_req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'little-boxes/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
