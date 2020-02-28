@@ -1,0 +1,329 @@
+#smiley {
+  position: relative;
+  display: block;
+  margin: 2rem auto;
+  bottom: 400px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 0.5rem solid rgb(46, 45, 45);
+}
+
+#smiley::before {
+  position: relative;
+  display: block;
+  content: "..";
+  padding: 0 0.5rem 0 1rem;
+  font-size: 8rem;
+  line-height: 1.75rem;
+}
+
+#smiley::after {
+  position: relative;
+  display: block;
+  left: 2.25rem;
+  top: 0.25rem;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border-bottom: 0.5rem solid rgb(46, 45, 45);
+}
+
+#container, #sky {
+  width: 600px;
+  height: 400px;
+  perspective: 400px;
+}
+
+#sidewalk {
+  position: absolute;
+  background-color: #d6d6cb;
+  bottom: 115px;
+  left: 0px;
+  height: 20px;
+  width: 200px;
+}
+
+#window-frame {
+  position: absolute;
+  bottom: 140px;
+  left: 154px;
+  background: #7a5a54;
+  height: 60px;
+  width: 120px;
+  transform: rotateY(-30deg);
+}
+
+#window {
+  position: absolute;
+  bottom: 145px;
+  left: 159px;
+  background: linear-gradient(to right,
+    #eaf0ec, #ccd6cc);
+  height: 50px;
+  width: 110px;
+  transform: rotateY(-30deg);
+}
+
+#front-wall {
+  position: relative;
+  background: linear-gradient(to right,
+    rgb(154, 163, 194), rgb(120, 129, 161));
+  height: 200px;
+  width: 300px;
+  top: 100px;
+  left: 301px;
+  transform: rotateY(20deg);
+}
+
+#side-wall {
+  position: relative;
+  bottom: 100px;
+  left: 124px;
+  background: linear-gradient(to right, 
+    rgb(225, 228, 236), rgb(186, 192, 195));
+  height: 200px;
+  width: 200px;
+  transform: rotateY(-30deg);
+}
+
+#side-roof {
+  position: relative;
+  width: 0; 
+  height: 0; 
+  border-left: 80px solid transparent;
+  border-right: 82px solid transparent;
+  border-bottom: 80px solid rgb(102, 100, 98);
+  bottom: 382px;
+  left: 146px;
+  transform: skew(10deg, -9deg)
+}
+
+#grass {
+  position: relative;
+  width: 100% ;
+  height: 150px;
+  background-color: rgb(64, 75, 50);
+  bottom: 230px;
+  z-index: -1;
+}
+
+#front-roof {
+  position: absolute;
+  height: 48px;
+  width: 306px;
+  background-color: rgb(42, 42, 41);
+  top: 49px;
+  left: 264px;
+  transform: rotateY(20deg) skew(61deg);
+}
+
+#bush {
+  position: absolute;
+  height: 80px;
+  width: 70px;
+  top: 230px;
+  right: 29px;
+  border-radius: 120px 70px 80px 90px;
+  transform: rotate(90deg);
+  background: radial-gradient(at top,
+    rgb(104, 112, 87), rgb(81, 83, 62));
+}
+
+#deck-top {
+  position: absolute;
+  top: 281px;
+  right: 82px;
+  height: 20px;
+  width: 126px;
+  background-color: rgb(97, 80, 74);
+  transform: rotate(-4.2deg) skew(82deg);
+  z-index:2;
+}
+
+#deck-bottom {
+  position: absolute;
+  top: 303px;
+  right: 82px;
+  height: 20px;
+  width: 126px;
+  background-color: rgb(73, 61, 56);
+  transform: rotate(-4.2deg) skew(82deg);
+}
+
+#deck-fill {
+  position: absolute;
+  top: 290px;
+  right: 18px;
+  height: 24px;
+  width: 260px;
+  background-color: rgb(73, 61, 56);
+}
+
+#door-frame {
+  position: absolute;
+  background-color: rgb(41, 35, 35);
+  height: 110px;
+  width: 97px;
+  top: 188px;
+  right: 151px;
+  transform: rotateY(38deg);
+}
+
+#door {
+  position: absolute;
+  background: linear-gradient(to bottom,
+    rgb(75, 48, 48), rgb(85, 58, 58));
+  height: 100px;
+  width: 60px;
+  top: 195px;
+  right: 170px;
+  transform: rotateY(24deg);
+}
+
+#door-knob {
+  position: absolute;
+  background: linear-gradient(to bottom, 
+    rgb(206, 206, 181), 
+    rgb(153, 153, 122) 20%,
+    rgb(85, 85, 70) 60%);
+  height: 12px;
+  width: 12px;
+  top: 238px;
+  border-radius: 12px;
+  right: 209px;
+  transform: rotateY(24deg);
+}
+
+#front-window-frame {
+  position: absolute;
+  background: rgb(22, 22, 22);
+  height: 82px;
+  width: 118px;
+  top: 189px;
+  right: 51px;
+  transform: rotateY(24deg);
+}
+
+#front-window {
+  position: absolute;
+  background: linear-gradient(to right, 
+    rgb(43, 45, 61) 10%, rgb(33, 34, 46) 20%,
+    rgb(43, 45, 61) 30%, rgb(33, 34, 46) 40%,
+    rgb(43, 45, 61) 50%, rgb(33, 34, 46) 60%,
+    rgb(43, 45, 61) 70%, rgb(33, 34, 46) 80%,
+    rgb(43, 45, 61) 90%, rgb(33, 34, 46));
+  height: 70px;
+  width: 100px;
+  top: 195px;
+  right: 60px;
+  transform: rotateY(24deg);
+}
+
+#tree-top {
+  position: absolute;
+  background: radial-gradient(rgb(112, 153, 121), rgb(74, 114, 88));
+  height: 150px;
+  width: 150px;
+  top: 123px;
+  left: 38px;
+  border-radius: 150px 100px 190px 100px;
+  z-index: 2;
+}
+
+#tree-blob{
+  position: absolute;
+  height: 80px;
+  width: 70px;
+  top: 150px;
+  left: 15px;
+  border-radius: 80px 70px 80px 90px;
+  background: radial-gradient(rgb(95, 131, 103), rgb(80, 124, 96));
+  z-index: 1;
+}
+
+#tree-blob2 {
+  position: absolute;
+  display: block;
+  height: 110px;
+  width: 90px;
+  top: 107px;
+  left: 62px;
+  border-radius: 90px 120px 100px 70px;
+  background: radial-gradient( #52775c, #638a6e);
+}
+
+#tree-blob3 {
+  position: absolute;
+  display: block;
+  height: 120px;
+  width: 100px;
+  top: 137px;
+  left: 102px;
+  border-radius: 160px 260px 200px 200px;
+  background: radial-gradient( #4d7056, #638a6e);
+}
+
+#tree-blob4 {
+  position: absolute;
+  display: block;
+  height: 60px;
+  width: 60px;
+  top: 217px;
+  left: 112px;
+  border-radius: 100px 80px 60px 50px;
+  background: radial-gradient(at bottom, #5b8064, #638a6d);
+  z-index: 2;
+}
+
+#tree-trunk {
+  position: absolute;
+  background-color: rgb(51, 46, 26);
+  width: 13px;
+  height: 80px;
+  top: 272px;
+  left: 104px;
+}
+
+#sky {
+position: relative;
+display: grid;
+grid-template-columns: repeat(30, 20px);
+grid-template-rows: repeat(20, 20px);
+bottom: 400px;
+z-index: -1;
+overflow: hidden;
+}
+
+.pixel {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(175, 213, 230);
+}
+
+.pixel:nth-child(2n + 0) {
+  background-color: rgb(200, 226, 238);
+}
+
+.pixel:nth-child(3n + 0) {
+  background-color: rgb(175, 209, 226);
+}
+
+.pixel:nth-child(4n + 0) {
+  background-color: rgb(187, 205, 233);
+}
+
+.pixel:nth-child(5n + 0) {
+  background-color: rgb(192, 218, 221);
+}
+
+.pixel:nth-child(6n + 0) {
+  background-color: rgb(177, 211, 228);
+}
+
+.pixel:nth-child(7n + 0) {
+  background-color: rgb(211, 220, 235);
+}
