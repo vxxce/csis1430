@@ -100,7 +100,7 @@ h1 {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
   }
    /* Hide mobile menu button */
   button#slide {
