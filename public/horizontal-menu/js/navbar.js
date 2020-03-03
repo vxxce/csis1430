@@ -14,7 +14,7 @@ const slide = target => {
   target.style.transitionDuration = '500ms'
   target.style.height = target.offsetHeight + 'px'
   if (target.classList.contains('visible')) {
-    target.style.height = '8rem'
+    target.style.height = '10rem'
     label.style.textDecoration = 'underline'
   } else {
     target.style.height = 0
