@@ -33,6 +33,10 @@ app.get("/little-boxes", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'little-boxes/index.html'))
 });
 
+app.get("/horizontal-menu", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'horizontal-menu/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
