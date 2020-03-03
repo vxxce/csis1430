@@ -91,16 +91,16 @@ h1 {
 }
 
 /**
- * Mobile first. Break at 800px.
+ * Mobile first. Break at 600px.
  */
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 
   /* Switch from grid to flex */
   nav {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
   }
    /* Hide mobile menu button */
   button#slide {

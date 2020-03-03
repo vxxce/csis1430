@@ -32,7 +32,7 @@ menuButton.addEventListener('click', () => slide(navList))
 
 // Force navList height to handle interference between screen resizing and opened nav.
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 800) {
+  if (window.innerWidth > 600) {
     navList.style.height = '3.5rem'
   } else {
     navList.classList.remove('visible')
