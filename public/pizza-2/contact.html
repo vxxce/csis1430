@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/pizza-2/css/index.css">
+  <title>Pizza Parlor - Contact</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li class="nav-link"><a href="/pizza-2/index.html">Home</a></li>
+        <li class="nav-link"><a href="/pizza-2/about.html">About</a></li>
+        <li class="nav-link"><a href="/pizza-2/contact.html">Contact</a></li>
+        <li class="nav-link"><a href="/pizza-2/order.html">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Contact</h1>
+  <form id="contact-form" action="http://www.stonecoldprofessor.com/1430/pizza-form/contact-process.php" method="POST">
+    <p>
+      <label for="first-name">First name: </label>
+      <input type="text" id="first-name" name="first-name">
+    </p>
+    <p>
+      <label for="last-name">Last name: </label>
+      <input type="text" id="last-name" name="last-name">
+    </p>
+    <p>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email">
+    </p>
+    <p>
+      <label for="message">Message: </label>
+      <br>
+      <br>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </p>
+    <input type="reset" value="CLEAR">
+    <input type="submit" value="SEND">
+  </form>
+</body>
+
+</html>
