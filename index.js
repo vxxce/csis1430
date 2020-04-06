@@ -37,6 +37,10 @@ app.get("/horizontal-menu", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'horizontal-menu/index.html'))
 });
 
+app.get("/js-birthday", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'js-birthday/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
