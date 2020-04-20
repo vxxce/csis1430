@@ -41,6 +41,10 @@ app.get("/js-birthday", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'js-birthday/index.html'))
 });
 
+app.get("/mad-lib", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'mad-lib/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
