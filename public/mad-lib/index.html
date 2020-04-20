@@ -1,0 +1,61 @@
+<!--
+  and this
+    Put a link to this program on your site's home page
+--------------
+one more
+    Make a second MadLib program with a different story and different input questions. Allow the user to choose which one to play.
+    Ask the user for, and use in the final output (at least) 2 of ALL 8 parts of speech.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad-Lib</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Mad-Libs</h1>
+  <p>Fill out the fields below and we'll collab on a spectacularly bad, ill-grammared story.</p>
+  <form onsubmit="return false;">
+    <label for="noun1">Noun: </label>
+    <input id="noun1" type="text" />
+    <label for="noun2">Noun: </label>
+    <input id="noun2" type="text" />
+    <label for="adj1">Adjective: </label>
+    <input id="adj1" type="text" />
+    <label for="adj2">Adjective: </label>
+    <input id="adj2" type="text" />
+    <label for="verb1">Verb: </label>
+    <input id="verb1" type="text" />
+    <label for="verb2">Verb: </label>
+    <input id="verb2" type="text" />
+    <label for="adverb1">Adverb: </label>
+    <input id="adverb1" type="text" />
+    <label for="adverb2">Adverb: </label>
+    <input id="adverb2" type="text" />
+    <label for="prep1">Preposition: </label>
+    <input id="prep1" type="text" />
+    <label for="prep2">Preposition: </label>
+    <input id="prep2" type="text" />
+    <label for="pro1">Pronoun: </label>
+    <input id="pro1" type="text" />
+    <label for="pro2">Pronoun: </label>
+    <input id="pro2" type="text" />
+    <label for="con1">Conjunction: </label>
+    <input id="con1" type="text" />
+    <label for="con2">Conjunction: </label>
+    <input id="con2" type="text" />
+    <label for="inter1">Interjection: </label>
+    <input id="inter1" type="text" />
+    <label for="inter2">Interjection: </label>
+    <input id="inter2" type="text" />
+    <button onclick="fillStory()">SUBMIT</button>
+  </form>
+  <p id="mount"></p>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
