@@ -1,7 +1,29 @@
+:root {
+  font-family: Helvetica, arial, sans-serif;
+}
+
 img {
   display: block;
 }
 
-button.hidden {
+h1 {
+  display: inline-block;
+}
+
+#again {
+  background: none;
+  border: none;
+  color: #00f;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#again:hover {
+  text-decoration: underline;
+  color: rgb(47, 100, 185);
+  cursor: pointer;
+}
+
+button#again.hidden {
   display: none;
 }

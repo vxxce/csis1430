@@ -1,60 +1,78 @@
-// ::::::::: ELEMENT CONSTANTS :::::::::::
-
 const guessInput = document.querySelector('#guess')
 const submit = document.querySelector('#submit')
 const message = document.querySelector('h1')
+const again = document.querySelector('#again')
 
 
+let answer = Math.ceil(Math.random() * 99)
+let guess = guessInput.value
+let attempts = 0
+
+const newGame = () => {
+
+  // ::::::::: ELEMENT CONSTANTS :::::::::::
+
+}
 // :::::::::: GAME FUNCTIONS :::::::::::::
 
-// Init random answer
-let answer = Math.ceil(Math.random() * 99)
-
 // Checks if a guess is higher, equivalent to, or lower than answer 
-const checkGuess = guess => (guess - answer) / Math.abs(guess - answer) ? (guess - answer) / Math.abs(guess - answer) : 0
+const checkGuess = (guess, answer) => (guess - answer) / Math.abs(guess - answer) ? (guess - answer) / Math.abs(guess - answer) : 0
 
-// Update DOM with feedback about guess
-const showFeedback = () => {
-  let guess = Number(guessInput.value)
-  guessInput.value = ""
-  switch(checkGuess(guess)){
+// const loadImage = async (src) => {
+
+// }
+
+// Update DOM to reflect guess
+const updateView = (guess, difference) => {
+  guessInput.focus()
+  switch(difference){
     case -1:
-      message.textContent = "Too low, guess again!"
+      message.textContent = `${guess.toString()} is too low, guess again!`
       break
     case 0:
       message.textContent = "Nice."
-      message.nextElementSibling.classList.toggle('hidden')
+      again.classList.toggle('hidden')
       break
     case 1:
-      message.textContent = "Too high, guess again!"
+      message.textContent = `${guess.toString()} is too high, guess again!`
       break
     default:
       break
     }
 }
 
+const checkForSubmit = event => {
+      // Ignore key input beyond two characters, unless key is Enter, Backspace, or Tab
+      if (event.keyCode == 13) {
+        event.returnValue = true
+        event.preventDefault()
+        newGuess()
+      } else if (event.target.value.length >= 2 && event.keyCode != 8 && event.keyCode != 9) {
+        event.returnValue = false
+    } else {
+      event.returnValue = true
+    }
+}
+
+const newGuess = () => {
+  let guess = Number(guessInput.value)
+  let diff = checkGuess(guess, answer)
+  updateView(guess, diff)
+  attempts += 1
+}
 
 // ::::::::: EVENT LISTENERS ::::::::::::::
 
 // Clear element when focus re-applied after user guess
-guessInput.addEventListener('focus', e => e.target.value = "")
+guessInput.addEventListener('focus', () => guessInput.value = "")
 
-// Prevent form submission on "Enter" keypress and instead showFeedback()
-guessInput.addEventListener('keydown', e => {
-  // Ignore key input beyond two characters, unless key is Enter, Backspace, or Tab
-  if (e.keyCode == 13) {
-    e.returnValue = true
-    e.preventDefault()
-    showFeedback()
-  } else if (e.target.textLength > 1 && e.keyCode != 8 && e.keyCode != 9) {
-    e.returnValue = false
-  } else {
-    e.returnValue = true
-  }
-})
+// Prevent form submission on "Enter" keypress and instead updateView()
+guessInput.addEventListener('keydown', e => checkForSubmit(e))
 
 // Imitate submit event (not actually a GET or POST)
 submit.addEventListener('click', () => {
-  showFeedback()
+  newGuess()
   guessInput.focus()
 })
+
+window.onload = () => newGame()
