@@ -49,6 +49,10 @@ app.get("/guess", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'guess/index.html'))
 });
 
+app.get("/lottery", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'lottery/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
