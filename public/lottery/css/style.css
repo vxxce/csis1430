@@ -22,7 +22,7 @@ input {
   width: min-content;
 }
 
-input[type="submit"] {
+#generate {
   display: inline-block;
   background-color: #00f;
   color: #fff;
@@ -30,6 +30,11 @@ input[type="submit"] {
   border-radius: 2em;
   padding: 0.2em 0.4em;
   font-size: 6vw;
+}
+
+#generate:hover {
+  background-color: rgb(51, 73, 238);
+  cursor: pointer;
 }
 
 #numLength {
