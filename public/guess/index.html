@@ -7,10 +7,13 @@
   <title>Guess</title>
 </head>
 <body>
-  <div>
-    <h1>Guess a number between 1 and 99!</h1>
-    <button class="hidden" id="again">PLAY AGAIN?</button>
-    <input id="guess" type="number" min="1" max="99" maxlength="2" autofocus>
+  <div id="grid">
+    <img src="img/start.jpg" alt="empty target">
+    <div id="guess-wrap">
+      <h1>Guess a number between 1 and 99!</h1>
+      <button class="hidden" id="again">PLAY AGAIN?</button>
+      <input id="guess" type="number" min="1" max="99" maxlength="2" autofocus>
+    </div>
   </div>
   <script src="js/guess.js"></script>
 </body>
