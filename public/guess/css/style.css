@@ -81,6 +81,18 @@ button.hidden {
   display: none;
 }
 
+#guesses {
+display: block;
+text-align: center;
+margin: 1rem;
+widh
+}
+
+span {
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
 @media screen and (max-width: 700px) {
   
   :root {
@@ -101,5 +113,9 @@ button.hidden {
     margin-top: -2rem;
     grid-row: 2;
     transform: rotate(90deg);
+  }
+
+  span {
+    font-size: 2rem;
   }
 }

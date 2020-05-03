@@ -5,39 +5,47 @@ const submit = document.querySelector('#submit')
 const message = document.querySelector('h1')
 const again = document.querySelector('#again')
 const image = document.querySelector('img')
+const guesses = document.querySelector('#guesses')
 
 
 // ::::::::::::::: INIT :::::::::::::::::::
 
 let answer = 0
-let guess = ""
 let attempts = 0
+let guessesMade = []
 
 // :::::::::: GAME FUNCTIONS :::::::::::::
 
 // Checks if a guess is higher, equivalent to, or lower than answer 
 const checkGuess = (guess, answer) => (guess - answer) / Math.abs(guess - answer) ? (guess - answer) / Math.abs(guess - answer) : 0
 
-// TODO: loadImage = async (src) => { }
-
 // Update view based on  guess
 
 const updateView = (guess, difference) => {
-  guessInput.value = ""
-  attempts += 1
+  guesses.innerHTML =
+    "<span>".concat(guessesMade
+                      .filter(v => v != "")
+                      .map(v => Number.isNaN(v) ? "?" : v)
+                      .join(',</span><span>'))
+    .concat("</span>")
+
+
   if (attempts == 8) {
+    attempts = 0
     message.textContent = "You lose."
     again.classList.remove('hidden')
     image.src = "img/error.jpg"
+    guessInput.disabled = true;
     return
   }
+
   switch(difference){
     case -1:
       message.textContent = `${guess.toString()} is too low, guess again!`
       image.src = "img/low.jpg"
       break
     case 0:
-      message.textContent = "Nice."
+      message.textContent = `Nice! You took ${guessesMade.length.toString()} guesses.`
       again.classList.remove('hidden')
       image.src = "img/win.jpg"
       break
@@ -45,16 +53,18 @@ const updateView = (guess, difference) => {
       message.textContent = `${guess.toString()} is too high, guess again!`
       image.src = "img/high.jpg"
       break
-    case "start":
+    case "new":
+      guessesMade = []
+      attempts = 0
       answer = Math.ceil(Math.random() * 99)
       console.log(
         `**********************\n** THE ANSWER IS ${answer.toString().padStart(2, "0")} **\n**********************`)
       again.classList.add('hidden')
       message.textContent = "Guess a number between 1 and 99!"
       image.src = "img/start.jpg"
+      guesses.innerHTML = ""
       break
     default:
-      again.classList.add('hidden')
       message.textContent = "That is... not a number?"
       image.src = "img/error.jpg"
       break
@@ -79,11 +89,14 @@ const checkForSubmit = event => {
 const newGuess = () => {
   let guess = Number(guessInput.value) || NaN
   let diff = Number(guess) ? checkGuess(guess, answer) : NaN
+  guessesMade.push(guess)
+  attempts++
   updateView(guess, diff)
+  guessInput.value = ""
 }
 
 // ::::::::: EVENT LISTENERS ::::::::::::::
-window.onload = () => updateView("", "start")
+window.onload = () => updateView("", "new")
 
 // Clear element when focus re-applied after user guess
 guessInput.addEventListener('focus', () => guessInput.value = "")
@@ -92,6 +105,6 @@ guessInput.addEventListener('focus', () => guessInput.value = "")
 guessInput.addEventListener('keydown', e => checkForSubmit(e))
 
 again.addEventListener('click', () => {
-  attempts = 0
-  updateView("", 'start')
+  guessInput.disabled = false
+  updateView("", "new")
 })
