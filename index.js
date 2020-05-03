@@ -45,6 +45,10 @@ app.get("/mad-lib", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'mad-lib/index.html'))
 });
 
+app.get("/guess", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'guess/index.html'))
+});
+
 // Server activation
 app.listen(port, () => {
   console.log(`Listening http://localhost:${port}`);
