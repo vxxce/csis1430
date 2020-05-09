@@ -99,6 +99,7 @@ section:first-child {
 
 section:last-child {
   background-color: #c8553d;
+  color: rgb(240, 240, 240);
 }
 
 section:nth-child(even) {
