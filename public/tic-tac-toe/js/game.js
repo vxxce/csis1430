@@ -13,16 +13,22 @@ let cells = [
 ]
 
 const checkWin = (col, row) => {
+  let win = false
   if (((col == 2 || col == 0) && (row == 2 || row == 0) || (col == 1 && row == 1)) && turn == cells[1][1]) {
-    if (cells[0][0] == cells[1][1] && cells[0][0] == cells[2][2]) return true
-    else if (cells[2][0] == cells[1][1] && cells[2][0] == cells[0][2]) return true
+    if (cells[0][0] == cells[1][1] && cells[0][0] == cells[2][2]) win = ["00", "11", "22"]
+    else if (cells[2][0] == cells[1][1] && cells[2][0] == cells[0][2]) win = ["20", "11", "02"]
   }
-  if (cells[row].every(v => v == cells[row][col])) return true
-  if (cells.every(r => r[col] == cells[row][col])) return true
+  if (cells[row].every(v => v == cells[row][col])) win = ["0", "1", "2"].map(v => row.toString() + v)
+  if (cells.every(r => r[col] == cells[row][col])) win = ["0", "1", "2"].map(v => col.toString() + v)
+  if (win) {
+    win.forEach(id => document.getElementById(id).style.color = "#e1c794")
+    return true
+  }
   return false
 }
 
 const reset = () =>  {
+  document.querySelectorAll("div > div").forEach(el => el.style.color = "#fff")
   moves = 0
   cells.length = 0;
   cells = [
@@ -71,6 +77,7 @@ board.addEventListener('click', e => {
       cells[row][col] = turn
       moves++
       if (checkWin(col, row)) {
+
         newGame(name.textContent, true)
       } else if (moves == 9) {
         newGame(name.textContent, false) 
