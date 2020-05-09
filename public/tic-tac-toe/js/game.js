@@ -13,9 +13,9 @@ let cells = [
 ]
 
 const checkWin = (col, row) => {
-  if ((col == 2 || col == 0) && (row == 2 || row == 0)) {
-    if (cells[0][0] == cells[1][1]  && cells[0][0] == cells[2][2]) return true
-    else if (cells[2][0] == cells[1][1] == cells[0][0] == cells[0][2]) return true
+  if (((col == 2 || col == 0) && (row == 2 || row == 0) || (col == 1 && row == 1)) && turn == cells[1][1]) {
+    if (cells[0][0] == cells[1][1] && cells[0][0] == cells[2][2]) return true
+    else if (cells[2][0] == cells[1][1] && cells[2][0] == cells[0][2]) return true
   }
   if (cells[row].every(v => v == cells[row][col])) return true
   if (cells.every(r => r[col] == cells[row][col])) return true
@@ -23,7 +23,6 @@ const checkWin = (col, row) => {
 }
 
 const reset = () =>  {
-  turn = 0
   moves = 0
   cells.length = 0;
   cells = [
@@ -35,7 +34,7 @@ const reset = () =>  {
     el.classList.remove("disabled")
     el.textContent = ""
   }
-  name.textContent = player2.value
+  name.textContent = (turn) ? player2.value : player1.value
   again.style.display = "none"
 }
 
@@ -68,9 +67,9 @@ board.addEventListener('click', e => {
       e.target.classList.add("disabled")
       let col = Number(e.target.id) % 10
       let row = Number(Math.floor(e.target.id / 10))
-      cells[row][col] = turn + 1
       e.target.textContent = "XO".charAt(turn)
-      turn += (turn) ? -1 : 1
+      cells[row][col] = turn
+      moves++
       if (checkWin(col, row)) {
         newGame(name.textContent, true)
       } else if (moves == 9) {
@@ -78,6 +77,7 @@ board.addEventListener('click', e => {
       } else {
         name.textContent = (name.textContent == player2.value) ? player1.value : player2.value
       }
+      turn += (turn) ? -1 : 1
   }
 })
 
