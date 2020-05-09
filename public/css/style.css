@@ -118,7 +118,7 @@ h2:hover {
 
 section > div, section > p {
   width: fit-content;
-  max-width: 30rem;
+  max-width: 50rem;
   margin: 1rem auto;
 
 }
