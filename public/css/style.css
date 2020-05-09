@@ -115,6 +115,13 @@ h1:hover {
   cursor: pointer;
 }
 
+section > div, section > p {
+  width: fit-content;
+  max-width: 30rem;
+  margin: 1rem auto;
+
+}
+
 li {
   list-style: none;
 }
