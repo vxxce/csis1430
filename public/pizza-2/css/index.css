@@ -45,7 +45,7 @@ nav.navbar > ul > li.nav-link > a:hover {
 }
 
 h1 {
-  margin: 2rem 2rem 2rem 0;
+  margin: 2rem;
   padding: 1rem 0;
   display: inline-block;
   border-bottom: 0.25rem solid #e2e2e2;
