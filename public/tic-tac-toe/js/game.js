@@ -19,7 +19,7 @@ const checkWin = (col, row) => {
     else if (cells[2][0] == cells[1][1] && cells[2][0] == cells[0][2]) win = ["20", "11", "02"]
   }
   if (cells[row].every(v => v == cells[row][col])) win = ["0", "1", "2"].map(v => row.toString() + v)
-  if (cells.every(r => r[col] == cells[row][col])) win = ["0", "1", "2"].map(v => col.toString() + v)
+  if (cells.every(r => r[col] == cells[row][col])) win = ["0", "1", "2"].map(v => v + col.toString())
   if (win) {
     win.forEach(id => document.getElementById(id).style.color = "#e1c794")
     return true
