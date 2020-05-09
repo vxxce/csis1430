@@ -1,10 +1,9 @@
-const showPane = document.querySelector('#showPane')
-const hidePane = document.querySelector('#hidePane')
+const sections = [...document.querySelectorAll('section')]
 
-showPane.addEventListener('click', () => {
-  document.querySelector('#navPane').style.transform = "translate3d(calc(0vw + 1rem), 0, 0)"
-})
+const toggleOpen = (key) => {
+  sections.slice(0, key).forEach(s => s.classList.add("closed"))
+  sections[key].classList.remove("closed")
+  sections.slice(key + 1, sections.length).forEach(s => s.classList.add("closed"))
+}
 
-hidePane.addEventListener('click', () => {
-  document.querySelector('#navPane').style.transform = "translate3d(calc(-100vw - 1rem), 0, 0)"
-})
+window.addEventListener('load', () => sections.forEach((s, i) => s.firstElementChild.addEventListener('click', _e => toggleOpen(i))))
