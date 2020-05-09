@@ -8,7 +8,7 @@ body {
 main {
   display: block;
 }
-h1 {
+h2 {
   font-size: 2em;
   margin: 0.67em;
 }
@@ -105,13 +105,13 @@ section:nth-child(even) {
   background-color: rgb(170, 145, 112);
 }
 
-h1 {
+h2 {
   font-size: calc(1.5rem + calc(0.01 * 100vw));
   max-height: 5rem;
   color: rgb(245, 245, 245);
 }
 
-h1:hover {
+h2:hover {
   cursor: pointer;
 }
 
