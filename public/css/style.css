@@ -82,7 +82,7 @@ section {
   overflow: hidden;
   grid-template-rows: 4rem calc(100vh - 12rem);
   transition-property: grid-template-rows;
-  transition-duration: 0.3s;
+  transition-duration: 0.15s;
 }
 
 section.closed {
