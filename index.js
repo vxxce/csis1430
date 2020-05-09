@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "public"))); // Serve static assets/
 
 // Route definitions
 app.get("/", (_req, res) => {
-  res.sendFile(path.join(__dirname, 'public', "index.html"));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 });
 
 app.get("/tables", (_req, res) => {
@@ -19,6 +19,10 @@ app.get("/tables", (_req, res) => {
 
 app.get("/pizza-1", (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'pizza-1/index.html'))
+});
+
+app.get("/pizza-2", (_req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'pizza-2/index.html'))
 });
 
 app.get("/image-map", (_req, res) => {
