@@ -135,6 +135,10 @@ a:active {
   top: 1.1em;
 }
 
+a#paintings {
+  top: 0;
+}
+
 li:hover {
   transition-duration: 0.2s;
   color: rgb(219, 252, 252);
