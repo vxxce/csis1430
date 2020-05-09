@@ -14,7 +14,7 @@ app.get("/", (_req, res) => {
 });
 
 app.get("/tables", (_req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'tables.html'))
+  res.sendFile(path.join(__dirname, 'public', 'tables/index.html'))
 });
 
 app.get("/pizza-1", (_req, res) => {
