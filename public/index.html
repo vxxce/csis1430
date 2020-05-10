@@ -11,7 +11,7 @@
 
 <body>
   <nav>
-    <section id="assignments" class="closed">
+    <section class="closed">
       <h2 id="openAssign">ASSIGNMENTS</h2>
       <ul id="nav-list">
         <li class="nav-item"><a class="nav-link" href="lottery/">Lotto</a></li>
@@ -28,25 +28,46 @@
         <li class="nav-item"><a class="nav-link" href="/">This</a></li>
       </ul>
     </section>
-    <section id="reflection" class="closed">
+    <section class="closed">
       <h2 id="openReflect">REFLECTION</h2>
-      <div>
-        <p>
-          This course was more challening than I thought it would be. Most of my prior experience with web dev was building react apps, so getting back to the basics sans-libraries/frameworks was good for me. I definitely made things harder on myself by electing to use my own tooling and infrastructure to support the site (remote dev and production servers, custom domain set-up, SFTP tooling, versioning/git, etc.). I learned a lot doing things this way, but there was a lot of maintenance to distract from the core course content.
-        </p>
-        <p>
-          I was guilty throughout the semester of using syntax that would break my pages in older browsers (ES6+ syntax, HTML5 feautures, etc.). I definitely need to go through and re-write that code or add the relevant poly-fills. Building react apps I grew pretty used to using newer features and counting on e.g. Webpack or other bundling and preprocessing tools to make my modern code work for not-so-modern browsers.
-        </p>
+      <div id="reflections">
+        <div id="scroller">
+          <p>
+            I had fun working my way through this course. It was more challenging than I thought it would be. Most of my prior experience with web dev was
+            building React / Node apps, so getting back to the basics and writing vanilla JS, HTML, and CSS without libraries / frameworks was good for me.
+            I realized I breezed past a lot of the fundamentals. I hadn't appreciated how complex writing plain old CSS can get. My CSS is pretty hacky and off-the-cuff
+            right now. I'd like to read more about organizing (e.g. BEM) and maintaining growing style sheets. I'd also like to learn about tools like SCSS, SASS, LESS, etc.
+          </p>
+          <p>
+            I definitely made things harder on myself by electing early in the semester to deviate somewhat from the course recommendations and use some of my own tooling
+            and infrastructure to support the site (remote dev and prod servers, accessing machines via SSH, integrating SSH with my IDE, building a back-end in Node.js, managing
+            a custom domain / nameservers, versioning/git along the way, etc.). I learned a lot doing things this way, but it provided plenty to distract me from the core course content.
+          </p>
+          <p>
+            The code on these pages has a lot of room for improvement, althought I'm quite happy with much of it. I wass guilty throughout the semester
+            of using ES6+ and HTML5 features / syntax that prevents my pages from working properly in some browsers. I hope to either re-write the code I want to keep around
+            or add the relevant poly-fills. Building React apps I grew pretty used to using newer features and counting on e.g. Webpack / Parcel or other build-time
+            and pre-processing tools.
+          </p>
+          <p>
+            Overall, I had a good time and learned quite a bit more than I thought I would!
+          </p>
+        </div>
       </div>
     </section>
-    <section id="nav3" class="">
+    <section class="">
       <h2 id="openAbout">ABOUT</h2>
       <div>
         <p>
-          Hi! I'm Zachary. I'm a first-semester student in the CSIS program at Salt Lake Community College. I also have a degree in Psychology from the University of Utah. I have taught myself a small bit of programming in my own time (mostly in Python and Javascript) but am otherwise new to world of Computer Science.
+          Hi! I'm Zach. I'm a first semester student in the CSIS program at SLCC.
         </p>
         <p>
-          Some of my other hobbies include painting (see <a id="paintings" href="https://zacharyolp.in/">here</a>), the board game "Go" (AKA Baduk or Weiqi), photography, camping, bookbinding, and cycling. I could never settle on a favorite film or book but the first two that come to mind are, respectively, Waking Life and Behave: The Biology of Humans at Our Best and Worst.
+          I taught myself a bit of programming (mostly Python, JS) but am otherwise fresh
+          to the field! I also have a B.S. from the U.
+        </p>
+        <p>
+          Hobbies include painting, the board game "Go" / Baduk, book binding, and cycling.
+          Currently reading: <em>Exhalations</em>, watching: <em>Devs</em>, hearing: <em>Luke Abbott</em>.
         </p>
       </div>
     </section>
