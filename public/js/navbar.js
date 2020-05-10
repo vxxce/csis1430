@@ -1,6 +1,8 @@
 const sections = [...document.querySelectorAll('section')]
 
 const slide = (target, i) => {
+  // iterates through the sections, and changes the `top` property, either "closing" or "opening"
+  // it by pushing it and preceeding/following sections to top or bottom
   sections.forEach(s => {
     s.style.transitionProperty = "top"
     s.style.transitionDuration = "1000ms"
@@ -22,6 +24,7 @@ const slide = (target, i) => {
       target.style.top = "calc(100vh - 8rem)"
     }
   }
+  // Apply scroll fade-out filter when the center section open.
   sections[1].classList.contains('closed')
     ? document.querySelector('#scroller').classList.remove('scroll-mask')
     : document.querySelector('#scroller').classList.add('scroll-mask')
@@ -35,7 +38,4 @@ const slide = (target, i) => {
   }, 1000)
 }
 
-
-// Menu button (seen on small screens only), triggers "slide" function
 sections.forEach((s, i) => s.firstElementChild.addEventListener('click', () => slide(s, i)))
-// window.onload = () => slide(sections[2])

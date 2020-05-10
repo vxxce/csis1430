@@ -78,6 +78,7 @@ body {
   overflow: hidden;
 }
 
+/******** sections / panes of navigation **********/
 section {
   margin: 0;
   padding: 0;
@@ -87,7 +88,6 @@ section {
   font-size: 1.4rem;
   line-height: 2rem;
 }
-
 
 section > * {
   margin: 1rem 1rem 0 1rem;
@@ -104,7 +104,7 @@ section:last-child {
   top: 8rem;
   z-index: 3;
 }
-
+/* rough top border */
 section:last-child:after {
   position: absolute;
   content: " ";
@@ -128,10 +128,11 @@ section:nth-child(even):after {
   background-image: url("../img/brown.svg");
   background-size: cover;
   height: 16px;
- top: -14px;
+  top: -14px;
   width: 100vw;
   display: block;
-} 
+}
+/*********************************************/
 
 h2 {
   font-size: calc(1.5rem + calc(0.01 * 100vw));
@@ -162,6 +163,8 @@ a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/******** Sub-menu with assignments **********/
 
 ul {
   font-size: 6vw;
@@ -198,6 +201,9 @@ section > div {
   overflow: hidden;
 }
 
+/*********************** **********/
+
+/* Make scroll box, hide scrollbar, indicate additional content with fade-out */
 #scroller {
   height: 100%;
   width: 100%;
@@ -209,12 +215,18 @@ section > div {
   content: " ";
   height: 22vh;
   width: 100vw;
-  background: linear-gradient(rgba(170, 145, 112, 0) 0%, rgb(170, 145, 112) 75%, rgb(170, 145, 112) 100%);
+  background: linear-gradient(
+    rgba(170, 145, 112, 0) 0%,
+    rgb(170, 145, 112) 75%,
+    rgb(170, 145, 112) 100%
+  );
   position: fixed;
   bottom: 4rem;
   left: 0;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
+
+/* ***** Media Queries ************* */
 
 @media screen and (min-width: 470px) {
   ul > li {
@@ -254,7 +266,7 @@ section > div {
   ul {
     margin: 3rem;
   }
-  
+
   ul > li {
     width: 23vh;
     height: 23vh;
